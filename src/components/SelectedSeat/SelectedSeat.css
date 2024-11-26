@@ -67,4 +67,10 @@ margin-bottom: 2rem;
 text-align: center;
 }
   
- 
+.seat-picker {
+    padding: 2rem;
+  }
+  
+  .seats {
+    margin: 2rem 0;
+  }
