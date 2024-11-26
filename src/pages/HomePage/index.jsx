@@ -9,6 +9,10 @@ export const HomePage = () => {
 const navigate = useNavigate()
 const [journey, setJourney] = useState(null)
 
+  const handleSelected = () => {
+    setSelected(!selected)
+  }
+
   const handleJourneyChange = (journeyData) => {
     setJourney(journeyData)
   }
@@ -39,7 +43,7 @@ const [journey, setJourney] = useState(null)
       {journey !== null && 
       <>
         <JourneyDetail journey={journey} />
-        <SeatPicker seats={journey.seats} />   
+        <SeatPicker selectedSeat={journey.autoSeat} seats={journey.seats} />   
         <div className="controls container">
           <button onClick={handleBuy} className="btn btn--big" type="button">Rezervovat</button>
         </div>
