@@ -1,16 +1,16 @@
-import Seat from "../Seat/Seat"
+
+import SeatRow from "../SeatRow/SeatRow"
 import "./SeatPicker.css"
 
-const SeatPicker = () => {
+const SeatPicker = ({seats}) => {
+
     return(
-            <div class="seat-picker container">
-      <h2>Vyberte sedadlo</h2>
-      <div class="seats">
-        <Seat number="1" />
-        <Seat number="17" />
-        <Seat number="33" />
-      </div>
-    </div>
+        <div className="seat-picker container">
+        <h2>Vyberte sedadlo</h2>
+        <div className="seats">
+            {seats.map((seat, index) => <SeatRow key={index} row={seat} />)}
+        </div>
+        </div>
     )
 }
 
